@@ -43,4 +43,20 @@ public class ExampleFunctionalInterface {
                 .sum();
     }
 
+    public String exampleNewFunctionalInterface(ParseToString parseToString, Object object) {
+        return parseToString.toString(object);
+    }
+
+
+    /**
+     * Each functional interface has a single abstract method, called the functional method for that functional interface,
+     * to which the lambda expression's parameter and return types are matched or adapted.
+     */
+    @FunctionalInterface
+    interface ParseToString {
+        String toString(Object object);
+    }
+
 }
+
+

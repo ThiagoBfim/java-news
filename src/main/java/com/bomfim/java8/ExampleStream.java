@@ -15,10 +15,10 @@ public class ExampleStream {
     public long countPairsNumbers(int end) {
         List<Integer> generated = IntStream.rangeClosed(1, end).boxed().toList(); //Java 8 .collect(Collectors.toList());
 
-        Stream<Integer> parallel = generated.stream() //This Stream is not executed now, Streams are Lazy
+        Stream<Integer> stream = generated.stream() //This Stream is not executed now, Streams are Lazy
                 .peek(System.out::println);  //Intermediate operator
 
-        return parallel
+        return stream
                 .filter(f -> f % 2 == 0) //Intermediate operator
                 .count(); //final operator
     }
@@ -26,22 +26,22 @@ public class ExampleStream {
     public long countPairsNumbersParallel(int end) {
         List<Integer> generated = IntStream.rangeClosed(1, end).boxed().toList();
 
-        Stream<Integer> parallel = generated.stream()
+        Stream<Integer> streamParallel = generated.stream()
                 .parallel() //Intermediate operator
                 .peek(System.out::println);
 
-        return parallel
+        return streamParallel
                 .filter(f -> f % 2 == 0)
                 .count();
     }
 
     public List<Integer> errorStream(int end) {
         List<Integer> generated = IntStream.rangeClosed(1, end).boxed().toList();
-        Stream<Integer> parallel = generated.stream();
-        long count = parallel
+        Stream<Integer> stream = generated.stream();
+        long count = stream
                 .count();  //final operator
         if (count > 0) {
-            return parallel
+            return stream
                     .collect(Collectors.toList());  //final operator
         }
         return Collections.emptyList();

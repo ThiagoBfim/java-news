@@ -6,6 +6,7 @@
 
     <groupId>com.bomfim</groupId>
     <artifactId>news-java</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
@@ -19,6 +20,11 @@
             </plugin>
         </plugins>
     </build>
+
+    <modules>
+        <module>sample-module</module>
+    </modules>
+
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -29,8 +35,13 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
+            <version>3.23.1</version>
             <scope>test</scope>
-            <version>3.22.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.bomfim</groupId>
+            <artifactId>sample-module</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

@@ -10,7 +10,10 @@ Here I will include some news in each version of Java, perhaps the most importan
 - Modules
 - New methods Stream
 - OfUnmodifiable
-- [ ] Java 10
+- [x] Java 10
+- Copy Unmodifiable
+- Optional.orElseThrow()
+- Local-Variable Type Inference
 - [ ] Java 11
 - [ ] Java 12
 - [ ] Java 13

@@ -14,7 +14,11 @@ Here I will include some news in each version of Java, perhaps the most importan
 - Copy Unmodifiable
 - Optional.orElseThrow()
 - Local-Variable Type Inference
-- [ ] Java 11
+- [x] Java 11
+- HttpClient
+- Files.writeString | files.readString
+- String.strip
+- Predicate.not
 - [ ] Java 12
 - [ ] Java 13
 - [ ] Java 14

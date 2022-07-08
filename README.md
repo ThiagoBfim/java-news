@@ -19,7 +19,8 @@ Here I will include some news in each version of Java, perhaps the most importan
 - Files.writeString | files.readString
 - String.strip
 - Predicate.not
-- [ ] Java 12
+- [x] Java 12
+- Compact Number Formatting
 - [ ] Java 13
 - [ ] Java 14
 - [ ] Java 15

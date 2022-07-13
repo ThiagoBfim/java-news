@@ -23,7 +23,11 @@ Here I will include some news in each version of Java, perhaps the most importan
 - Compact Number Formatting
 - [x] Java 13
 - Switch Expression | Yield
-- [ ] Java 14
+- [x] Java 14
+- NPE Helpful
+- Pattern Matching
+- Records
+- TextBlock
 - [ ] Java 15
 - [ ] Java 16
 - [ ] Java 17

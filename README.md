@@ -28,7 +28,8 @@ Here I will include some news in each version of Java, perhaps the most importan
 - Pattern Matching
 - Records
 - TextBlock
-- [ ] Java 15
+- [x] Java 15
+- Sealed Class 
 - [ ] Java 16
 - [ ] Java 17
 - [ ] Java 18

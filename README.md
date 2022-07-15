@@ -30,7 +30,8 @@ Here I will include some news in each version of Java, perhaps the most importan
 - TextBlock
 - [x] Java 15
 - Sealed Class 
-- [ ] Java 16
+- [x] Java 16
+- News Stream
 - [ ] Java 17
 - [ ] Java 18
 

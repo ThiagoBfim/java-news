@@ -32,7 +32,8 @@ Here I will include some news in each version of Java, perhaps the most importan
 - Sealed Class 
 - [x] Java 16
 - News Stream
-- [ ] Java 17
+- [x] Java 17
+- Pattern Matching for Switch
 - [ ] Java 18
 
 

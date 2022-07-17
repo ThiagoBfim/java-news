@@ -34,6 +34,7 @@ Here I will include some news in each version of Java, perhaps the most importan
 - News Stream
 - [x] Java 17
 - Pattern Matching for Switch
-- [ ] Java 18
+- [x] Java 18
+- Deprecate Finalization for Removal
 
 

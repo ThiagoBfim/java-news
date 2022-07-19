@@ -5,7 +5,7 @@ import java.util.Optional;
 /**
  * <a href="https://www.baeldung.com/java-10-overview#optionalorelsethrow">Java 10 Overview</a>
  */
-public class OptionalNewMethods {
+public class OptionalOrElseThrow {
 
     public String getLastNameOrElseThrow(String fullName) {
         return Optional.ofNullable(fullName)

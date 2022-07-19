@@ -9,6 +9,7 @@ Here I will include some news in each version of Java, perhaps the most importan
 - [x] Java 9
 - Modules
 - New methods Stream
+- Optional.ifPresentOrElse | Optional.or
 - OfUnmodifiable
 - [x] Java 10
 - Copy Unmodifiable

@@ -37,5 +37,7 @@ Here I will include some news in each version of Java, perhaps the most importan
 - Pattern Matching for Switch
 - [x] Java 18
 - Deprecate Finalization for Removal
+- [x] Java 19
+- Virtual Thread
 
 

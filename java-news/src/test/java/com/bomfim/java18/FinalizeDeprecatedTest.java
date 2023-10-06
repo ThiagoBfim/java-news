@@ -34,13 +34,13 @@ class FinalizeDeprecatedTest {
 
         assertThat(outContent.toString()).contains("Finally",
                 "error",
-                "Thread:Thread[main,5,main]")
+                "Thread:Thread[#1,main,5,main]")
                 .doesNotContain("The end");
 
         //Executed by another thread.
         //The use of finalization can lead to problems with security, performance, and reliability. See JEP 421  for discussion and alternatives.
         assertThat(outContent.toString()).contains("Finalize Deprecated",
-                "Thread:Thread[Finalizer,8,system]");
+                "Thread:Thread[#5,Finalizer,8,system]");
 
     }
 }

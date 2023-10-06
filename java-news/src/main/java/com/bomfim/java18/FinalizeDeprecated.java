@@ -1,5 +1,8 @@
 package com.bomfim.java18;
 
+/**
+ * <a href="https://openjdk.org/jeps/421">JEP 421: Deprecate Finalization for Removal</a>
+ */
 public class FinalizeDeprecated {
     public void finalizeInternalCall() {
         MyClass myClass = new MyClass();

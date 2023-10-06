@@ -20,12 +20,12 @@ public class SealedClass {
         }
     }
 
-    public abstract sealed static class Shape
+    public abstract static sealed class Shape
             permits Circle, Rectangle, Square {
         abstract double calculateArea();
     }
 
-    public final static class Circle extends Shape {
+    public static final class Circle extends Shape {
         private final double radius;
 
         public Circle(double radius) {
@@ -42,7 +42,7 @@ public class SealedClass {
         }
     }
 
-    public sealed static class Rectangle extends Shape
+    public static sealed class Rectangle extends Shape
             permits FilledRectangle {
         private final double width;
         private final double height;
@@ -62,7 +62,7 @@ public class SealedClass {
         }
     }
 
-    public non-sealed static class Square extends Shape {
+    public static non-sealed class Square extends Shape {
         private final double side;
 
         public Square(double side) {

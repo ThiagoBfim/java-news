@@ -5,6 +5,9 @@ import java.time.Duration;
 import java.util.concurrent.Executors;
 import java.util.stream.IntStream;
 
+/**
+ * <a href="https://openjdk.org/jeps/425">JEP 425: Virtual Threads (Preview)</a>
+ */
 public class VirtualThread {
     public void executeWithThreadPool() {
         try (var executor = Executors.newCachedThreadPool()) {

@@ -14,4 +14,22 @@ public class PatternMatchingSwitch4Preview {
             default -> "not defined";
         };
     }
+
+    public String printToStringUpperWhenLenghtMoreThan10(Object object) {
+        return switch (object) {
+            case null -> "";
+            case String s
+                when s.length() > 10 -> s.toUpperCase();
+            case String s -> s;
+            default -> "not defined";
+        };
+    }
+
+    public String printPokemonName(Object object) {
+        return switch (object) {
+            case null -> "";
+            case RecordPatterns2Preview.Pokemon(String name, String type) -> name;
+            default -> "not defined";
+        };
+    }
 }

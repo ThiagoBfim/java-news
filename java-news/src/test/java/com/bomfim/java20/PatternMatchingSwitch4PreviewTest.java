@@ -19,9 +19,9 @@ class PatternMatchingSwitch4PreviewTest {
     @Test
     void printToStringUpperWhenLenghtMoreThan10() {
         var patternMatchingSwitch = new PatternMatchingSwitch4Preview();
-        assertThat(patternMatchingSwitch.printToStringUpperWhenLenghtMoreThan10(null)).isEmpty();
-        assertThat(patternMatchingSwitch.printToStringUpperWhenLenghtMoreThan10("square with more than 10")).isEqualTo("SQUARE WITH MORE THAN 10");
-        assertThat(patternMatchingSwitch.printToStringUpperWhenLenghtMoreThan10("square")).isEqualTo("square");
+        assertThat(patternMatchingSwitch.printToStringUpperWhenLengthMoreThan10(null)).isEmpty();
+        assertThat(patternMatchingSwitch.printToStringUpperWhenLengthMoreThan10("square with more than 10")).isEqualTo("SQUARE WITH MORE THAN 10");
+        assertThat(patternMatchingSwitch.printToStringUpperWhenLengthMoreThan10("square")).isEqualTo("square");
     }
 
     @Test

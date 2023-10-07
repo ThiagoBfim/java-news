@@ -15,7 +15,7 @@ public class PatternMatchingSwitch4Preview {
         };
     }
 
-    public String printToStringUpperWhenLenghtMoreThan10(Object object) {
+    public String printToStringUpperWhenLengthMoreThan10(Object object) {
         return switch (object) {
             case null -> "";
             case String s

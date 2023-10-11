@@ -34,6 +34,15 @@ public class RecordPokemon {
         }
     }
 
+    /**
+     * Pokemon Using Record - JEP 395: Records
+     * From Java 16
+     *
+     * @param id
+     * @param name
+     * @param type
+     * @param species
+     */
     public record PokemonRecord(Integer id, String name, List<String> type, String species) {
     }
 

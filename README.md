@@ -39,5 +39,10 @@ Here I will include some news in each version of Java, perhaps the most importan
 - Deprecate Finalization for Removal
 - [x] Java 19
 - Virtual Thread
+- [x] Java 20
+- Pattern Matching for switch (Fourth Preview)
+- Record Patterns
+- [x] Java 21
+- Sequenced Collections
 
 

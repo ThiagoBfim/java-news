@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.bomfim</groupId>
-    <artifactId>news-java-bom</artifactId>
+    <artifactId>java-news-project</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
@@ -30,7 +30,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M7</version>
                 <configuration>
-                    <argLine>-XX:ActiveProcessorCount=1 -da</argLine>
+                    <argLine>-XX:ActiveProcessorCount=1 -da --enable-preview</argLine>
                 </configuration>
             </plugin>
         </plugins>

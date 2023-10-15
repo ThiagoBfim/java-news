@@ -10,7 +10,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>java-news</artifactId>
+    <artifactId>java-news-module</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
 

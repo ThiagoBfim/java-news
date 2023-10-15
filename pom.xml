@@ -37,7 +37,7 @@
     </build>
 
     <modules>
-        <module>java-news</module>
+        <module>java-news-module</module>
         <module>sample-module</module>
         <module>java-improvements</module>
     </modules>

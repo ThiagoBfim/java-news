@@ -15,10 +15,22 @@ public class StringImprovements {
         return text.indexOf("a", 5, 10);
     }
 
+    /**
+     * New splitWithDelimiters() Methods Added to String and java.util.regex.Pattern (JDK-8305486)
+     *
+     * @param text
+     * @return
+     */
     public String[] splitWithDelimiters(String text, String pattern) {
         return text.splitWithDelimiters(pattern, 5);
     }
 
+    /**
+     * New splitWithDelimiters() Methods Added to String and java.util.regex.Pattern (JDK-8305486)
+     *
+     * @param text
+     * @return
+     */
     public City splitWithDelimitersPattern(String text) {
 
         var p = Pattern.compile("""

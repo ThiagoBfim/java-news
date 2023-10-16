@@ -44,5 +44,7 @@ Here I will include some news in each version of Java, perhaps the most importan
 - Record Patterns
 - [x] Java 21
 - Sequenced Collections
+- String Template (Preview)
+- String improvements, JDK-8302590 and JDK-8305486
 
 

@@ -46,5 +46,6 @@ Here I will include some news in each version of Java, perhaps the most importan
 - Sequenced Collections
 - String Template (Preview)
 - String improvements, JDK-8302590 and JDK-8305486
+- Unnamed Patterns and Variables (Preview)
 
 

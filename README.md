@@ -22,6 +22,7 @@ Here I will include some news in each version of Java, perhaps the most importan
 - Predicate.not
 - [x] Java 12
 - Compact Number Formatting
+- Teeing method Stream
 - [x] Java 13
 - Switch Expression | Yield
 - [x] Java 14
@@ -32,7 +33,7 @@ Here I will include some news in each version of Java, perhaps the most importan
 - [x] Java 15
 - Sealed Class 
 - [x] Java 16
-- News Stream
+- New Stream methods (toList, mapMulti)
 - [x] Java 17
 - Pattern Matching for Switch
 - [x] Java 18

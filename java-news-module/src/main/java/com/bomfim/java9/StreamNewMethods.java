@@ -8,7 +8,8 @@ import java.util.stream.Stream;
 public class StreamNewMethods {
 
     public long getNumbersBiggerThanFour(int end) {
-        Stream<Integer> stream = Stream.iterate(1, i -> i <= end, i -> i + 1);
+        Stream<Integer> stream = Stream
+                .iterate(1, i -> i <= end, i -> i + 1);
         stream = stream
                 .dropWhile(f -> f <= 4)//The dropWhile operation will remove elements while the given predicate for an element returns true and stops removing on the first predicate's false.
                 .dropWhile(f -> f % 2 == 0); //Next iteration will be 5, will return false and will end this execution
@@ -19,8 +20,7 @@ public class StreamNewMethods {
 
     public long getNumbersSmallerThanFour(int end) {
         Stream<Integer> stream = Stream
-                .iterate(1, i -> i <= end, i -> i + 1) //This is a lazy operation too.
-                .peek(System.out::println);
+                .iterate(1, i -> i <= end, i -> i + 1); //This is a lazy operation too.
 
         stream = stream
                 .takeWhile(f -> f <= 4); //The takeWhile operation will keep elements while the given predicate for an element returns true;

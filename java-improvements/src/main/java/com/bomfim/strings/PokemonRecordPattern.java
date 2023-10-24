@@ -66,13 +66,25 @@ public class PokemonRecordPattern {
     }
 
     /**
+     * Unnamed Patterns and Variables - JEP 286: Local-Variable Type Inference
+     * From Java 10
+     *
+     * @param obj pokeball
+     */
+    public void printPokeball3(Object obj) {
+        if (obj instanceof Pokeball(var name, PokemonRecord(var id, var pokemonName, var type, var species))) {
+            System.out.println("name: " + name + " - Pokemon: " + pokemonName);
+        }
+    }
+
+    /**
      * Unnamed Patterns and Variables - JEP 443: Unnamed Patterns and Variables (Preview)
      * From Java 21
      *
      * @param obj pokeball
      */
-    public void printPokeball3(Object obj) {
-        if (obj instanceof Pokeball(String name, PokemonRecord(var _, String pokemonName, var _, var _))) {
+    public void printPokeball4(Object obj) {
+        if (obj instanceof Pokeball(var name, PokemonRecord(_, var pokemonName, _, _))) {
             System.out.println("name: " + name + " - Pokemon: " + pokemonName);
         }
     }

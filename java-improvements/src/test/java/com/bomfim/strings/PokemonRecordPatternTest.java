@@ -95,4 +95,10 @@ class PokemonRecordPatternTest {
         pokemonRecordPattern.printPokeball3(pokeballEmpty);
         assertThat(outContent.toString()).isEmpty();
     }
+    @Test
+    void printPokeball4WithoutPokemon() {
+        var pokeballEmpty = new Pokeball("Ultra Ball", null);
+        pokemonRecordPattern.printPokeball4(pokeballEmpty);
+        assertThat(outContent.toString()).isEmpty();
+    }
 }

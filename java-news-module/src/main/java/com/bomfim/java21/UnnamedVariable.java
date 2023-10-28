@@ -12,7 +12,7 @@ public class UnnamedVariable {
      * @return
      */
     public String getPokemonDetailsFromPokeball(Object obj) {
-        if (obj instanceof Pokeball(String name, PokemonRecord(var _, String pokemonName, var _, var _))) {
+        if (obj instanceof Pokeball(String name, PokemonRecord(_, String pokemonName, _, _))) {
             return "Pokeball: " + name + " - Pokemon: " + pokemonName;
         }
         return null;

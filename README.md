@@ -1,6 +1,6 @@
 ## Java news
 
-Here I will include some news in each version of Java, perhaps the most important, at least for development, but remember, there will be more things to know about this, there are several new things done internally that help a lot.
+Here I will include some news about each version of Java, perhaps the most important, at least for development. But remember, there will be more things to know, there are several new things done internally that help a lot.
 
 - [x] Java 8
 - Functional Interface

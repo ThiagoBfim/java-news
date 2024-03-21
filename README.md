@@ -48,5 +48,7 @@ Here I will include some news about each version of Java, perhaps the most impor
 - String Template (Preview)
 - String improvements, JDK-8302590 and JDK-8305486
 - Unnamed Patterns and Variables (Preview)
-
+- [x] Java 22
+- Stream Gatherers
+- Statements before super(...)
 

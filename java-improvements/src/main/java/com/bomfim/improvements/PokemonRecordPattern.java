@@ -1,6 +1,6 @@
-package com.bomfim.strings;
+package com.bomfim.improvements;
 
-import com.bomfim.strings.RecordPokemon.PokemonRecord;
+import com.bomfim.improvements.RecordPokemon.PokemonRecord;
 
 import java.util.List;
 

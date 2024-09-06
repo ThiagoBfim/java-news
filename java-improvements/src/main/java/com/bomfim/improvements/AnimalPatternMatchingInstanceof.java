@@ -1,4 +1,4 @@
-package com.bomfim.strings;
+package com.bomfim.improvements;
 
 public class AnimalPatternMatchingInstanceof {
 

@@ -1,7 +1,7 @@
-package com.bomfim.strings;
+package com.bomfim.improvements;
 
-import com.bomfim.strings.PokemonRecordPattern.Pokeball;
-import com.bomfim.strings.RecordPokemon.PokemonRecord;
+import com.bomfim.improvements.PokemonRecordPattern.Pokeball;
+import com.bomfim.improvements.RecordPokemon.PokemonRecord;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

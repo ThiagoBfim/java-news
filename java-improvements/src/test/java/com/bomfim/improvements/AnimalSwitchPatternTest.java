@@ -1,5 +1,6 @@
-package com.bomfim.strings;
+package com.bomfim.improvements;
 
+import com.bomfim.improvements.AnimalSwitchPattern.Lion;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -8,22 +9,20 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static com.bomfim.strings.AnimalPatternMatchingInstanceof.Lion;
-import static com.bomfim.strings.AnimalPatternMatchingInstanceof.Toucan;
+import static com.bomfim.improvements.AnimalSwitchPattern.Toucan;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class AnimalPatternMatchingInstanceofTest {
+class AnimalSwitchPatternTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
     private final PrintStream originalErr = System.err;
-    private AnimalPatternMatchingInstanceof animalPatternMatching;
+    private AnimalSwitchPattern animalSwitchPattern;
 
     @BeforeEach
     void setUp() {
-        animalPatternMatching = new AnimalPatternMatchingInstanceof();
-
+        animalSwitchPattern = new AnimalSwitchPattern();
         System.setOut(new PrintStream(outContent));
         System.setErr(new PrintStream(errContent));
     }
@@ -37,15 +36,7 @@ class AnimalPatternMatchingInstanceofTest {
 
     @Test
     void testEatWrong() {
-        String food = animalPatternMatching.eatWrong(new Lion());
-        Assertions.assertThat(food)
-                .contains("Meat")
-                .doesNotContain("Fruit");
-    }
-
-    @Test
-    void testEat() {
-        String food = animalPatternMatching.eat(new Lion());
+        String food = animalSwitchPattern.eatWrong(new Lion());
         Assertions.assertThat(food)
                 .contains("Meat")
                 .doesNotContain("Fruit");
@@ -53,7 +44,7 @@ class AnimalPatternMatchingInstanceofTest {
 
     @Test
     void testDoActionOld() {
-        animalPatternMatching.doActionOld(new Lion());
+        animalSwitchPattern.doAction(new Lion());
         assertThat(outContent.toString()).contains("Hunting")
                 .contains("Climbing Tree")
                 .doesNotContain("Flying");
@@ -61,7 +52,7 @@ class AnimalPatternMatchingInstanceofTest {
 
     @Test
     void testDoAction() {
-        animalPatternMatching.doAction(new Toucan());
+        animalSwitchPattern.doAction(new Toucan());
         assertThat(outContent.toString()).contains("Flying")
                 .doesNotContain("Climbing Tree")
                 .doesNotContain("Hunting");

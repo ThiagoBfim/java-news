@@ -45,7 +45,7 @@ Here I will include some news about each version of Java, perhaps the most impor
 - Record Patterns
 - [x] Java 21
 - Sequenced Collections
-- String Template (Preview)
+- ~~String Template (Preview)~~ -> Removed
 - String improvements, JDK-8302590 and JDK-8305486
 - Unnamed Patterns and Variables (Preview)
 - [x] Java 22

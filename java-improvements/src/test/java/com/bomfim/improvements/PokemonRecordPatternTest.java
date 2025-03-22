@@ -79,7 +79,7 @@ class PokemonRecordPatternTest {
         var pokeballEmpty = new Pokeball("Ultra Ball", null);
         assertThatThrownBy(() -> pokemonRecordPattern.printPokeball2OldNPE(pokeballEmpty))
                 .isInstanceOf(NullPointerException.class)
-                .hasMessage("Cannot invoke \"com.bomfim.strings.RecordPokemon$PokemonRecord.name()\" because \"pokeball.pokemon\" is null");
+                .hasMessage("Cannot invoke \"com.bomfim.improvements.RecordPokemon$PokemonRecord.name()\" because \"pokeball.pokemon\" is null");
     }
 
     @Test

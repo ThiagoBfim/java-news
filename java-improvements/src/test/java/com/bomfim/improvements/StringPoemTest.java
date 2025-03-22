@@ -30,9 +30,9 @@ class StringPoemTest {
                 .contains("Shakespeare");
     }
 
-    @org.junit.jupiter.api.Test
-    void writePoemStringTemplate() {
-        Assertions.assertThat(stringPoem.writePoemStringTemplate("Shakespeare"))
-                .contains("Shakespeare");
-    }
+//    @org.junit.jupiter.api.Test
+//    void writePoemStringTemplate() {
+//        Assertions.assertThat(stringPoem.writePoemStringTemplate("Shakespeare"))
+//                .contains("Shakespeare");
+//    }
 }

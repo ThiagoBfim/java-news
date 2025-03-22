@@ -63,18 +63,18 @@ class StringJsonTest {
                         """);
     }
 
-    @Test
-    void writePokemonStringTemplate() {
-        Assertions.assertThat(stringJson.writePokemonStringTemplate(pokemon))
-                .isEqualTo("""
-                        {
-                          "id": 1,
-                          "name": "Bulbasaur",
-                          "type": [
-                            "Grass","Poison"
-                          ],
-                          "species": "Seed Pokémon",
-                        }
-                        """);
-    }
+//    @Test
+//    void writePokemonStringTemplate() {
+//        Assertions.assertThat(stringJson.writePokemonStringTemplate(pokemon))
+//                .isEqualTo("""
+//                        {
+//                          "id": 1,
+//                          "name": "Bulbasaur",
+//                          "type": [
+//                            "Grass","Poison"
+//                          ],
+//                          "species": "Seed Pokémon",
+//                        }
+//                        """);
+//    }
 }

@@ -2,7 +2,7 @@
 
 Here I will include some news about each version of Java, perhaps the most important, at least for development. But remember, there will be more things to know, there are several new things done internally that help a lot.
 
-- [x] Java 8
+- [x] Java 8 (LTS)
 - Functional Interface
 - Optional
 - Stream
@@ -15,7 +15,7 @@ Here I will include some news about each version of Java, perhaps the most impor
 - Copy Unmodifiable
 - Optional.orElseThrow()
 - Local-Variable Type Inference
-- [x] Java 11
+- [x] Java 11 (LTS)
 - HttpClient
 - Files.writeString | files.readString
 - String.strip
@@ -34,7 +34,7 @@ Here I will include some news about each version of Java, perhaps the most impor
 - Sealed Class 
 - [x] Java 16
 - New Stream methods (toList, mapMulti)
-- [x] Java 17
+- [x] Java 17 (LTS)
 - Pattern Matching for Switch
 - [x] Java 18
 - Deprecate Finalization for Removal
@@ -43,7 +43,7 @@ Here I will include some news about each version of Java, perhaps the most impor
 - [x] Java 20
 - Pattern Matching for switch (Fourth Preview)
 - Record Patterns
-- [x] Java 21
+- [x] Java 21 (LTS)
 - Sequenced Collections
 - ~~String Template (Preview)~~ -> Removed
 - String improvements, JDK-8302590 and JDK-8305486
@@ -54,6 +54,8 @@ Here I will include some news about each version of Java, perhaps the most impor
 - [x] Java 23
 - Primitive Types in Patterns, instanceof, and switch (Preview)
 - [x] Java 24
-- Stream Gatherers final version
-- [ ] Java 25
-- WIP
+- Stream Gatherers (final version)
+- [ ] Java 25 (LTS)
+- Module Import Declarations
+- Statements before super (final version)
+- Compact Source Files and Instance Main Methods

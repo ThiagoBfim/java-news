@@ -55,7 +55,10 @@ Here I will include some news about each version of Java, perhaps the most impor
 - Primitive Types in Patterns, instanceof, and switch (Preview)
 - [x] Java 24
 - Stream Gatherers (final version)
-- [ ] Java 25 (LTS)
+- Synchronize Virtual Threads without Pinning
+- [x] Java 25 (LTS)
 - Module Import Declarations
 - Statements before super (final version)
 - Compact Source Files and Instance Main Methods
+- Structured Concurrency
+- [ ] Java 26

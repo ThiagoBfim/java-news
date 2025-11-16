@@ -1,7 +1,9 @@
 package com.bomfim.java25;
 
+import java.time.Duration;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.StructuredTaskScope;
@@ -33,9 +35,12 @@ public class StructuredConcurrency {
             StructuredTaskScope.Subtask<String> account = scope
                     .fork(() -> executeExternalCall(Behavior.fail("fetch account", 500)));
 
-            scope.join();
+            Void join = scope.join();
 
             System.out.println(formatResults(users, account));
+        } catch (StructuredTaskScope.FailedException e) {
+            log("Task failed: " + e.getCause().getMessage());
+            throw (Exception) e.getCause();
         }
     }
 
@@ -46,7 +51,64 @@ public class StructuredConcurrency {
             StructuredTaskScope.Subtask<String> account = scope
                     .fork(() -> executeExternalCall(Behavior.fail("fetch account", 500)));
 
-            scope.join();
+            Object join = scope.join();
+            System.out.println("Successful Result: " + join);
+
+            System.out.println(formatResults(users, account));
+        }
+    }
+
+    void handleAllSuccessfulOrThrow() throws Exception {
+        try (var scope = StructuredTaskScope.open(StructuredTaskScope.Joiner.allSuccessfulOrThrow())) {
+            StructuredTaskScope.Subtask<String> users = scope
+                    .fork(() -> executeExternalCall(Behavior.run("fetch user", 500)));
+            StructuredTaskScope.Subtask<String> account = scope
+                    .fork(() -> executeExternalCall(Behavior.fail("fetch account", 500)));
+
+            Stream<StructuredTaskScope.Subtask<Object>> join = scope.join();
+            join.forEach(System.out::println); //Exception on previous line, otherwise, if success it will have the result from both call
+
+            System.out.println(formatResults(users, account));
+        }
+    }
+
+    void handleAwaitAll() throws Exception {
+        try (var scope = StructuredTaskScope.open(StructuredTaskScope.Joiner.awaitAll())) {
+            StructuredTaskScope.Subtask<String> users = scope
+                    .fork(() -> executeExternalCall(Behavior.run("fetch user", 500)));
+            StructuredTaskScope.Subtask<String> account = scope
+                    .fork(() -> executeExternalCall(Behavior.fail("fetch account", 500)));
+
+            Void join = scope.join();
+
+            System.out.println(formatResults(users, account));
+        }
+    }
+
+    void handleWithConfigurationTimeout() throws Exception {
+        try (var scope = StructuredTaskScope.open(StructuredTaskScope.Joiner.awaitAllSuccessfulOrThrow(),
+                cf -> cf.withTimeout(Duration.ofMillis(550)))) {
+            //The timeout starts counting from the moment the scope is opened, not when join() is called. This means the timeout covers the entire lifecycle of the scope.
+            StructuredTaskScope.Subtask<String> users = scope
+                    .fork(() -> executeExternalCall(Behavior.run("fetch user", 500)));
+            StructuredTaskScope.Subtask<String> account = scope
+                    .fork(() -> executeExternalCall(Behavior.run("fetch account", 500)));
+
+            Void join = scope.join();
+
+            System.out.println(formatResults(users, account));
+        }
+    }
+
+    void handleCustomJoiner() throws Exception {
+        try (var scope = StructuredTaskScope.open(new SeventyFivePercentJoiner<String>())) {
+            StructuredTaskScope.Subtask<String> users = scope
+                    .fork(() -> executeExternalCall(Behavior.run("fetch user", 500)));
+            StructuredTaskScope.Subtask<String> account = scope
+                    .fork(() -> executeExternalCall(Behavior.run("fetch account", 500)));
+
+            List<String> join = scope.join();
+            join.forEach(System.out::println);
 
             System.out.println(formatResults(users, account));
         }
@@ -57,7 +119,7 @@ public class StructuredConcurrency {
         log("Initialize - " + message);
         if (behavior.failed) {
             log("Ending with Error - " + message);
-            throw new RuntimeException("Internal Error from outside call");
+            throw new CustomException("Internal Error from outside call");
         }
         Thread.sleep(behavior.millisecondsDealy);
         log("Ending - " + message);
@@ -101,6 +163,13 @@ public class StructuredConcurrency {
                     case FAILED -> "❌️ " + subtask.exception().getMessage();
                 })
                 .collect(joining("\n\t", "Result:\n\t", ""));
+    }
+
+    public class CustomException extends RuntimeException {
+
+        public CustomException(String message) {
+            super(message);
+        }
     }
 
 }

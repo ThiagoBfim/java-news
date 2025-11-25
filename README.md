@@ -61,4 +61,5 @@ Here I will include some news about each version of Java, perhaps the most impor
 - Statements before super (final version)
 - Compact Source Files and Instance Main Methods
 - Structured Concurrency
+- Scoped Values
 - [ ] Java 26

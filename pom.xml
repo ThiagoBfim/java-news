@@ -10,8 +10,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>25</maven.compiler.source>
-        <maven.compiler.target>25</maven.compiler.target>
+        <maven.compiler.source>26</maven.compiler.source>
+        <maven.compiler.target>26</maven.compiler.target>
     </properties>
 
     <build>
@@ -30,7 +30,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M7</version>
                 <configuration>
-                    <argLine>-XX:ActiveProcessorCount=1 -da --enable-preview</argLine>
+                    <argLine>-XX:ActiveProcessorCount=1 -da --enable-preview --enable-final-field-mutation=news.java</argLine>
                 </configuration>
             </plugin>
         </plugins>

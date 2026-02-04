@@ -30,7 +30,7 @@ public class ScopedValueExample {
                         scope.fork(() -> NAME.get() + " from task 2");
 
                         var values = scope.join();
-                        values.forEach(v -> System.out.println(v.get()));
+                        values.forEach(v -> System.out.println(v));
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }

@@ -16,13 +16,14 @@ public final class SeventyFivePercentJoiner<T>
     private final Queue<T> successResults = new ConcurrentLinkedQueue<>();
 
     @Override
-    public boolean onFork(StructuredTaskScope.Subtask<? extends T> subtask) {
+    public boolean onFork(StructuredTaskScope.Subtask<T> subtask) {
         totalForked.incrementAndGet();
         return false;
     }
 
+
     @Override
-    public boolean onComplete(StructuredTaskScope.Subtask<? extends T> subtask) {
+    public boolean onComplete(StructuredTaskScope.Subtask<T> subtask) {
         if (subtask.state() == State.SUCCESS) {
             successResults.add(subtask.get());
             successCount.incrementAndGet();

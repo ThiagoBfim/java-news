@@ -45,7 +45,7 @@ public class StructuredConcurrency {
     }
 
     void handleAwaitAnySuccessfulOrThrow() throws Exception {
-        try (var scope = StructuredTaskScope.open(StructuredTaskScope.Joiner.anySuccessfulResultOrThrow())) {
+        try (var scope = StructuredTaskScope.open(StructuredTaskScope.Joiner.anySuccessfulOrThrow())) {
             StructuredTaskScope.Subtask<String> users = scope
                     .fork(() -> executeExternalCall(Behavior.run("fetch user", 500)));
             StructuredTaskScope.Subtask<String> account = scope
@@ -65,7 +65,7 @@ public class StructuredConcurrency {
             StructuredTaskScope.Subtask<String> account = scope
                     .fork(() -> executeExternalCall(Behavior.fail("fetch account", 500)));
 
-            Stream<StructuredTaskScope.Subtask<Object>> join = scope.join();
+            List<Object> join = scope.join();
             join.forEach(System.out::println); //Exception on previous line, otherwise, if success it will have the result from both call
 
             System.out.println(formatResults(users, account));

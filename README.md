@@ -63,3 +63,6 @@ Here I will include some news about each version of Java, perhaps the most impor
 - Structured Concurrency
 - Scoped Values
 - [ ] Java 26
+- Changes on the Structured Concurrency (JEP 525: Structured Concurrency (Sixth Preview))
+- JEP 526: Lazy Constants (Second Preview)
+- 
